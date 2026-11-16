@@ -1,4 +1,4 @@
 {
-  "/componentes/Creditos/page": "app/componentes/Creditos/page.js",
+  "/(auth)/Login/page": "app/(auth)/Login/page.js",
   "/page": "app/page.js"
 }

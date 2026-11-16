@@ -1,22 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Cinzel } from "next/font/google";
 import olhoLO from "../../imagens/olhoLO.png";
+
+const cinzel = Cinzel({ subsets: ["latin"] });
 
 export default function Header() {
     return(
-        <header className="bg-gradient-to-b from-black via-zinc-800 to-zinc-400 flex justify-between items-center h-24">
+        <header className="flex h-16 w-full items-center justify-between border-b border-purple-900 bg-[#100D18] px-4">
+            
             <div className="flex items-center gap-3">
-                <Image src={olhoLO} alt="olho Look Outside" width={100} height={100} loading="eager" className="w-[100px] object-contain"/>
-                <h1 className="text-white text-4xl font-bold justify-self-center">The Outside Guide (Versão Beta)</h1>
+                <Image src={olhoLO} alt="olho Look Outside" width={40} height={40} loading="eager" className="h-10 w-10 object-contain [image-rendering:pixelated]"/>
+                <span className={`${cinzel.className} text-2xl font-bold text-white`}>The Outside Guide</span>
             </div>
-            <div className="flex items-center justify-end gap-5 px-2">
-                <Link href="/Registro" className="flex text-lg justify-center items-center hover:underline decoration-wavy text-red-600 w-[125px] h-[45px] rounded-lg">
-                    Crie sua conta
+
+            <div className="flex items-center justify-end gap-3 px-2">
+                <Link href="/Login" className="flex h-10 items-center justify-center rounded-lg border border-red-600 bg-transparent px-5 text-white transition duration-300 hover:bg-red-600/10 hover:brightness-125">
+                    Entrar
                 </Link>
-                <Link href="/Login" className="flex text-white text-lg bg-red-900 justify-center items-center w-[90px] h-[45px] rounded-lg">
-                    Faça login
+
+                <Link href="/Registro" className="flex h-10 items-center justify-center rounded-lg bg-[#A51F3B] px-5 text-white transition duration-300 hover:brightness-125">
+                    Cadastrar
                 </Link>
             </div>
+
         </header>
     );
 }
