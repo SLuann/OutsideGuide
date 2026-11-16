@@ -18,6 +18,8 @@ export default function Hero() {
 
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(16,13,24,0.85)_0%,rgba(16,13,24,0.3)_100%)]" />
         
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#100D18]" />
+
             <div className="relative z-10 max-w-2xl px-6 py-16 text-center md:px-16">
 
             <h1 className={`${cinzel.className} mt-6 text-5xl font-bold leading-tight md:text-7xl`}>
