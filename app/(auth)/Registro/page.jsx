@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import FundoLeR from "../../imagens/FundoLeR.png";
+import FundoLeR from "../../assets/imagens/FundoLeR.png";
 import { cadastrarUsuario } from "../../../lib/auth";
 
 export default function Registro() {

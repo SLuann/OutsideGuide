@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Cinzel } from "next/font/google";
 import Image from "next/image";
-import IWLO from "../../imagens/IWLO.png";
-import IMLO from "../../imagens/IMLO.png";
-import IPLO from "../../imagens/IPLO.png";
-import IGLO from "../../imagens/IGLO.png";
+import IWLO from "../../assets/imagens/IWLO.png";
+import IMLO from "../../assets/imagens/IMLO.png";
+import IPLO from "../../assets/imagens/IPLO.png";
+import IGLO from "../../assets/imagens/IGLO.png";
 
 const cinzel = Cinzel({ subsets: ["latin"] });
 

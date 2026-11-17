@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Cinzel } from "next/font/google";
-import olhoLO from "../../imagens/olhoLO.png";
+import olhoLO from "../../assets/imagens/olhoLO.png";
 
 const cinzel = Cinzel({ subsets: ["latin"] });
 

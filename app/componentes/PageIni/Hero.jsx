@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fundo from "../../imagens/FundoLOmain.png";
+import fundo from "../../assets/imagens/FundoLOmain.png";
 import { Cinzel } from "next/font/google";
 import EntradaS from "./EntradaS";
 
@@ -22,7 +22,7 @@ export default function Hero() {
 
             <div className="relative z-10 max-w-2xl px-6 py-16 text-center md:px-16">
 
-            <h1 className={`${cinzel.className} mt-6 text-5xl font-bold leading-tight md:text-7xl`}>
+            <h1 className={`font-geral mt-6 text-6xl font-bold leading-tight md:text-7xl`}>
                 <span className="text-white">THE OUTSIDE</span>{" "} <span className="text-red-800">GUIDE</span>
             </h1>
 
