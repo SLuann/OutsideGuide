@@ -1,4 +1,9 @@
 {
-  "/componentes/Creditos/page": "app/componentes/Creditos/page.js",
+  "/Guia/page": "app/Guia/page.js",
+  "/Mapa/page": "app/Mapa/page.js",
+  "/Posts/page": "app/Posts/page.js",
+  "/Principal/page": "app/Principal/page.js",
+  "/Wiki/page": "app/Wiki/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js"
 }

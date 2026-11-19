@@ -20,3 +20,35 @@ export default function Header() {
         </header>
     );
 }
+
+export function HeaderMenu() {
+    return(
+        <header className="flex justify-center items-center gap-5 px-5">
+            <div>
+                <Link href="/Posts">
+                Posts
+                </Link>
+            </div>
+            <div>
+                <Link href="/Mapa">
+                Mapa
+                </Link>
+            </div>
+            <div>
+                <Link href="/Principal">
+                The Outside Guide
+                </Link>
+            </div>
+            <div>
+                <Link href="/Wiki">
+                Wiki
+                </Link>
+            </div>
+            <div>
+                <Link href="/Guia">
+                Guia
+                </Link>
+            </div>
+        </header>
+    )
+}
