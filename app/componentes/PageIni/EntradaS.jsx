@@ -1,15 +1,16 @@
 import Link from "next/link";
+import { Play, Info } from "lucide-react";
 
-export default function(){
+export default function EntradaS() {
     return(
         
         <div className="flex gap-8 justify-self-center">
-            <Link href="/componentes/HomePage" className="flex items-center justify-center bg-red-700 text-white w-[75px] h-[45px] rounded-lg">
-                Começar
+            <Link href="/HomePage" className="flex h-11 items-center gap-2 rounded-lg bg-[#6A3FA0] px-5 text-white transition duration-300 hover:brightness-125">
+                Explorar
             </Link>
 
-            <Link href="/componentes/Creditos" className="flex text-red-700 items-center justify-center border-1 w-[75px] h-[45px] rounded-lg">
-                Créditos
+            <Link href="/Creditos" className="flex h-11 items-center gap-2 rounded-lg border border-[#8B5FBF] bg-transparent px-5 text-white transition duration-300 hover:bg-[#8B5FBF]/20 hover:brightness-125">
+                Sobre
             </Link>           
         </div>
     )

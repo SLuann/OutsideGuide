@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'Midnight';
+    src: url('./assets/fontes/MidnightSpree-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --font-geral: 'Midnight', sans-serif;
+}
+
+.font-geral {
+    font-family: 'Midnight', sans-serif;
+}
