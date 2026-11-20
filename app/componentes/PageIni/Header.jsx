@@ -9,31 +9,34 @@ const cinzel = Cinzel({ subsets: ["latin"] });
 export default function Header({ type = "default" }) {
     if (type === "principal") {
     return (
-            <header className="flex justify-center items-center gap-5 px-5">
-            <div>
-                <Link href="/Posts">
+            <header className="flex h-[65px] items-center justify-center gap-16 bg-[#481658] border-b border-white/10 px-5">
+            <div className="flex items-center gap-10">
+                <Link href="/Posts" className="text-[#F0EAE2] underline hover:text-[#A52A2A]">
                 Posts
                 </Link>
-            </div>
-            <div>
-                <Link href="/Mapa">
+        
+                <Link href="/Mapa" className="text-[#F0EAE2] underline hover:text-[#A52A2A]">
                 Mapa
                 </Link>
             </div>
-            <div>
-                <Link href="/Principal">
-                The Outside Guide
+            <div className="flex justify-center">
+                <Link href="/Principal" className="text-[#F0EAE2] text-center underline leading-7 text-xl hover:text-[#A52A2A]">
+                The Outside <br /> Guide
                 </Link>
             </div>
-            <div>
-                <Link href="/Wiki">
+            <div className="flex items-center gap-10">
+                <Link href="/Wiki" className="text-[#F0EAE2] underline hover:text-[#A52A2A]">
                 Wiki
                 </Link>
-            </div>
-            <div>
-                <Link href="/Guia">
+            
+                <Link href="/Guia" className="text-[#F0EAE2] underline hover:text-[#A52A2A]">
                 Guia
                 </Link>
+
+                <Link href="/Perfil" className="bg-[#651B1B] text-[#F0EAE2] underline px-6 py-1.5 hover:bg-[#A52A2A] transition">
+                    Perfil
+                </Link>
+
             </div>
         </header>
     );
