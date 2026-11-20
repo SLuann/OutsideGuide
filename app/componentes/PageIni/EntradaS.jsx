@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Play, Info } from "lucide-react";
+import { Rotas } from "../../../lib/rotas";
 
 export default function EntradaS() {
     return(

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Cinzel } from "next/font/google";
 import olhoLO from "../../assets/imagens/olhoLO.png";
+import { Rotas } from "../../../lib/rotas";
 
 const cinzel = Cinzel({ subsets: ["latin"] });
 
@@ -46,13 +47,13 @@ export default function Header({ type = "default" }) {
             </div>
 
             <div className="flex items-center justify-end gap-3 px-2">
-                <Link href="/Login" className="flex h-10 items-center justify-center rounded-lg border border-red-600 bg-transparent px-5 text-white transition duration-300 hover:bg-red-600/10 hover:brightness-125">
+                <Link href={Rotas.Login} className="flex h-10 items-center justify-center rounded-lg border border-red-600 bg-transparent px-5 text-white transition duration-300 hover:bg-red-600/10 hover:brightness-125">
                     Entrar
                 </Link>
 
-                <Link href="/Registro" className="flex h-10 items-center justify-center rounded-lg bg-[#A51F3B] px-5 text-white transition duration-300 hover:brightness-125">
+            <Link href={Rotas.Registro} className="flex h-10 items-center justify-center rounded-lg bg-[#A51F3B] px-5 text-white transition duration-300 hover:brightness-125">
                     Cadastrar
-                </Link>
+            </Link>
             </div>
 
         </header>
