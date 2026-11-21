@@ -5,9 +5,10 @@ import IWLO from "../../assets/imagens/IWLO.png";
 import IMLO from "../../assets/imagens/IMLO.png";
 import IPLO from "../../assets/imagens/IPLO.png";
 import IGLO from "../../assets/imagens/IGLO.png";
-
+import { Rotas } from "../../../lib/rotas";
+ 
 const cinzel = Cinzel({ subsets: ["latin"] });
-
+ 
 const cards = [
     {
         numero: "01 / WIKI",
@@ -15,7 +16,7 @@ const cards = [
         texto: "Conheça as entidades, personagens e itens do universo de Look Outside.",
         imagem: IWLO,
         alt: "Imagem que simboliza a wiki",
-        href: "/wiki",
+        href: Rotas.Wiki,
     },
     {
         numero: "02 / MAPA",
@@ -23,7 +24,7 @@ const cards = [
         texto: "Explore os ambientes e descubra novos caminhos.",
         imagem: IMLO,
         alt: "Imagem que simboliza o mapa",
-        href: "/mapa",
+        href: Rotas.Mapa,
     },
     {
         numero: "03 / POSTS",
@@ -31,7 +32,7 @@ const cards = [
         texto: "Leia teorias, curiosidades e compartilhe suas ideias.",
         imagem: IPLO,
         alt: "Imagem que simboliza os posts",
-        href: "/posts",
+        href: Rotas.Posts,
     },
     {
         numero: "04 / GUIA",
@@ -39,20 +40,20 @@ const cards = [
         texto: "Encontre dicas e orientações para sobreviver.",
         imagem: IGLO,
         alt: "Imagem que simboliza o guia",
-        href: "/guia",
+        href: Rotas.Guia,
     },
 ];
-
+ 
 export default function SessoesI() {
     return (
         <div className="bg-gradient-to-b from-[#100D18] to-[#2A1650]">
             <section className="mx-auto w-full max-w-6xl px-6 pb-24 pt-2">
-
+ 
                 {/* Cabeçalho da seção */}
                 <div className="mb-10">
                     <div className="flex items-center gap-4">
                         <div className="h-12 w-1 bg-[#A51F3B]" />
-
+ 
                         <div>
                             <h2 className={`${cinzel.className} text-3xl font-bold text-purple-100`}>
                                 EXPLORE O DESCONHECIDO
@@ -62,10 +63,10 @@ export default function SessoesI() {
                             </p>
                         </div>
                     </div>
-
+ 
                     <div className="mt-6 h-px w-full bg-purple-900" />
                 </div>
-
+ 
                 {/* Cards */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {cards.map((card) => (
@@ -85,14 +86,14 @@ export default function SessoesI() {
                                     {card.numero}
                                 </span>
                             </div>
-
+ 
                             <div className="flex flex-1 flex-col gap-3 p-5">
                                 <h3 className={`${cinzel.className} text-2xl font-semibold text-white`}>
                                     {card.titulo}
                                 </h3>
-
+ 
                                 <p className="text-sm text-purple-300">{card.texto}</p>
-
+ 
                                 <Link
                                     href={card.href}
                                     className="mt-auto pt-2 text-sm font-semibold text-red-500 hover:text-red-400"
@@ -103,7 +104,7 @@ export default function SessoesI() {
                         </article>
                     ))}
                 </div>
-
+ 
             </section>
         </div>
     );
