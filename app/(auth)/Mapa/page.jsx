@@ -1,12 +1,12 @@
-import Header from "../componentes/PageIni/Header";
+import Header from "../../componentes/PageIni/Header";
 
-export default function Guia() {
+export default function Mapa() {
     return (
         <div>
              <Header type="principal" />
 
             <main>
-                <h1>Página de guia</h1>
+                <h1>Página de mapa</h1>
             </main>
         </div>
     );
