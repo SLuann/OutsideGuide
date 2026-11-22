@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import FundoLeR from "../../assets/imagens/FundoLeR.png";
 import PainelRecpSenha from "../../componentes/PainelRecpSenha";
 import { loginUsuario } from "../../../lib/auth";
+import {Rotas} from "../../../lib/rotas";
 
 export default function Login() {
   const [recoveryOpen, setRecoveryOpen] = useState(false);
@@ -15,6 +17,8 @@ export default function Login() {
   const [mensagem, setMensagem] = useState("");
   const [erro, setErro] = useState(false);
   const [carregando, setCarregando] = useState(false);
+
+  const router = useRouter();
 
   async function handleLogin(e) {
     e.preventDefault();
@@ -30,6 +34,7 @@ export default function Login() {
       });
 
       setMensagem("Login realizado com sucesso!");
+      router.push("/Principal");
 
     } catch (error) {
       setErro(true);
