@@ -1,4 +1,4 @@
-import Header from "../componentes/PageIni/Header";
+import Header from "../../componentes/PageIni/Header";
 
 export default function Wiki() {
     return (
