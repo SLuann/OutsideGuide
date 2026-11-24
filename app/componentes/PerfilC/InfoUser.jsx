@@ -108,10 +108,10 @@ export default function InfoUser({ perfil, onPerfilAtualizado }) {
     }
 
     return (
-        <section className="bg-[#111111] border border-[#481658] text-[#F0EAE2] shadow-lg shadow-[#481658] 
-        z-10 rounded-lg w-[500px] md:w-[1200px] px-3">
-            <h1 className="text-2xl font-bold">Informações Pessoais</h1>
-            <div className="p-3">
+        <section className="flex flex-col w-full bg-[#111111] border border-[#481658] text-[#F0EAE2] shadow-lg shadow-[#481658] 
+        z-10 rounded-lg">
+            <h1 className="text-2xl font-bold px-2">Informações Pessoais</h1>
+            <div className="p-4">
                 <h2>Nome de usuário:</h2>
 
                 {editandoNome ? (
@@ -121,10 +121,10 @@ export default function InfoUser({ perfil, onPerfilAtualizado }) {
                             value={nomeEditado}
                             onChange={(e) => {
                                 setNomeEditado(e.target.value);
-                                setErro("");
+                                setErroNome("");
                             }}
-                            onBlur={cancelarEdicao}
-                            disabled={salvando}
+                            onBlur={cancelarNome}
+                            disabled={salvandoNome}
                             autoFocus
                         />
 
@@ -132,9 +132,9 @@ export default function InfoUser({ perfil, onPerfilAtualizado }) {
                             type="button"
                             onMouseDown={(e) => e.preventDefault()}
                             onClick={salvarNome}
-                            disabled={salvando}
+                            disabled={salvandoNome}
                         >
-                            {salvando ? "Salvando..." : "Salvar"}
+                            {salvandoNome ? "Salvando..." : "Salvar"}
                         </button>
                     </div>
                 ) : (
@@ -150,11 +150,11 @@ export default function InfoUser({ perfil, onPerfilAtualizado }) {
 
                 {erroNome && <p>{erroNome}</p>}
             </div>
-            <div className="p-3">
+            <div className="p-4">
                 <h2>Email Registrado:</h2>
                 <p>{perfil?.email}</p>
             </div>
-            <div className="p-3">
+            <div className="p-4">
                 <h2>Biografia:</h2>
                 {editandoBio ? (
                     <div>
@@ -191,7 +191,7 @@ export default function InfoUser({ perfil, onPerfilAtualizado }) {
 
                 {erroBio && <p>{erroBio}</p>}
             </div>
-            <div className="p-3">
+            <div className="p-4">
                 <p>
                     Data de criação dessa conta:
                     Criado em{" "}
