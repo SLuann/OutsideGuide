@@ -57,7 +57,7 @@ export default function () {
         );
     }
     return (
-        <main className="gap-10 relative flex flex-col min-h-screen w-full items-center justify-center overflow-hidden ">
+        <main className="gap-10 relative flex flex-col min-h-screen w-full overflow-hidden px-8">
             <Image
                 src={PerfilF}
                 alt=""
@@ -66,42 +66,43 @@ export default function () {
                 className="bg-center bg-no-repeat bg-cover [image-rendering:pixelated]"
             />
             <div className="absolute inset-0 bg-black/60" />
-            <div className="flex flex-col z-10 text-center">
-                <div className="absolute top-4 left-4">
-                    <Link href={Rotas.Principal}
-                        className="m-3 text-sm text-[#77716B] font-medium hover:text-[#A52A2A] hover:underline">
-                        ← Voltar à Página Principal</Link>
-                </div>
-
-                <div className="flex relative justify-center items-center">
-                    <div className="w-[100px] h-[100px] border border-[#651B1B] rounded-full overflow-hidden">
-                        <img src={perfil?.avatar || "https://www.bogleech.com/games/lookoutside/crimsonbloom.png"}
-                            alt="Icone com imagem do perfil"
-                            className="w-full h-full object-cover object-center" />
+            <div className="flex flex-row z-10 gap-5">
+                <div className="flex flex-col z-10 text-center gap-5">
+                    <div className="flex flex-col text-start gap-2">
+                        <Link href={Rotas.Principal}
+                            className="m-3 text-sm text-[#77716B] font-medium hover:text-[#A52A2A] hover:underline">
+                            ← Voltar à Página Principal</Link>
                     </div>
-                    <button
-                        type="button"
-                        className="absolute bottom-1 right-1 bg-red-700 hover:bg-red-600
+                    <div className="flex flex-row gap-5">
+                        <div className="flex flex-col justify-start gap-4">
+                            <div className="flex relative justify-center items-center">
+                                <div className="w-[100px] h-[100px] md:w-[300px] md:h-[300px] border border-[#651B1B] rounded-full overflow-hidden">
+                                    <img src={perfil?.avatar || "https://www.bogleech.com/games/lookoutside/crimsonbloom.png"}
+                                        alt="Icone com imagem do perfil"
+                                        className="w-full h-full object-cover object-center" />
+                                </div>
+                                <button
+                                    type="button"
+                                    className="absolute bottom-1 right-1 bg-red-700 hover:bg-red-600
                             text-white w-9 h-9 rounded-full flex items-center justify-center
                             border-2 border-black transition-all hover:scale-110" >
-                        📷
-                    </button>
+                                    📷
+                                </button>
+                            </div>
+                            <InfoUser
+                                perfil={perfil}
+                                onPerfilAtualizado={(dados) =>
+                                    setPerfil((prev) => ({ ...prev, ...dados }))
+                                }
+                            />
+                        </div>
+                        <div className="w-[2px] max-w-full h-[800px] bg-[#481658] z-10 rounded-full" />
+                    </div>
                 </div>
-            </div>
-
-            <div className="w-[800px] h-[2px] bg-[#481658] z-10 rounded-full" />
-
-            <div className="flex flex-col w-full justify-center items-center md:flex-row gap-8 px-30">
-                <InfoUser
-                    perfil={perfil}
-                    onPerfilAtualizado={(dados) =>
-                        setPerfil((prev) => ({ ...prev, ...dados }))
-                    }
-                />
+                <div className="flex flex-col gap-5 w-full py-5">
                 <Conquistas />
-            </div>
-            <div className="flex flex-col w-full justify-center items-center md:flex-row gap-8 px-30">
                 <Progresso />
+                </div>
             </div>
         </main>
     );

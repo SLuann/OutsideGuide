@@ -108,8 +108,8 @@ export default function InfoUser({ perfil, onPerfilAtualizado }) {
     }
 
     return (
-        <section className="flex flex-col w-full bg-[#111111] border border-[#481658] text-[#F0EAE2] shadow-lg shadow-[#481658] 
-        z-10 rounded-lg">
+        <section className="flex flex-col bg-[#111111] border border-[#481658] text-[#F0EAE2] 
+        shadow-lg shadow-[#481658] z-10 rounded-lg">
             <h1 className="text-2xl font-bold px-2">Informações Pessoais</h1>
             <div className="p-4">
                 <h2>Nome de usuário:</h2>
